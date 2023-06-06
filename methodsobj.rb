@@ -64,3 +64,49 @@ puts 10.between?(5,13)
     puts running_count
     puts "this is testing"
 end
+
+# upto and downto method 
+
+5.upto(10){|current| puts "The count is #{current}"}
+10.downto(5){|current| puts "The count is #{current}"}
+
+# step method
+
+5.step(50,3){|current| puts "the step number is #{current}"}
+
+100.step(150,4) do |current|
+    puts "the number is taken to #{current}"
+end
+
+# Ternary operator
+
+puts 3<2? "yes" : "no"
+
+# for multiple line string use the MLS
+
+# index position in ruby
+
+s = "Hi, How are you?"
+
+puts s[0]
+puts s[-1]
+puts s.slice(0)
+
+puts s[5,10]
+
+# random in ruby
+
+puts rand.round(2)
+puts rand(100)
+puts rand (-77..-40)
+
+# procs  ---> proc is an object representation of the block, We can able reuse the block of code
+
+cubes = Proc.new {|number| number**3 }
+
+a = [1,2,4,5,7,8]
+b = [23,67,12,14,18]
+
+p a.map(&cubes)
+p b.map(&cubes)
+
